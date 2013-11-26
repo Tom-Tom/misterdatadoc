@@ -1,0 +1,89 @@
+{
+   "endpoints":[
+      {
+         "name":"By Region",
+         "methods":[
+            {
+               "MethodName":"List Region",
+               "Synopsis":"Returns the list of all Region",
+               "HTTPMethod":"GET",
+               "URI":"/region",
+               "RequiresOAuth":"N"
+            },
+            {
+               "MethodName":"Region Information",
+               "Synopsis":"Returns Region information for a given Region.",
+               "HTTPMethod":"GET",
+               "URI":"/region/:REGION_ID",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"REGION_ID",
+                     "Required":"Y",
+                     "Default":"Ile-de-France",
+                     "Type":"string",
+                     "Description":"Les informations de la region Ile-de-France."
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name":"By Departement",
+         "methods":[
+            {
+               "MethodName":"List Departement",
+               "Synopsis":"Returns the list of all Departement",
+               "HTTPMethod":"GET",
+               "URI":"/departement",
+               "RequiresOAuth":"N"
+            },
+            {
+               "MethodName":"Departement Information",
+               "Synopsis":"Returns Departement information for a given Departement.",
+               "HTTPMethod":"GET",
+               "URI":"/departement/:DEPARTEMENT_ID",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"DEPARTEMENT_ID",
+                     "Required":"Y",
+                     "Default":"Hauts-de-Seine",
+                     "Type":"string",
+                     "Description":"Les informations du departement Hauts-de-Seine."
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name":"By Commune",
+         "methods":[
+            {
+               "MethodName":"List Commune",
+               "Synopsis":"Returns the list of all Commune",
+               "HTTPMethod":"GET",
+               "URI":"/commune",
+               "RequiresOAuth":"N"
+            },
+            {
+               "MethodName":"Commune Information",
+               "Synopsis":"Returns Commune information for a given Commune.",
+               "HTTPMethod":"GET",
+               "URI":"/commune/:COMMUNE_ID",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"COMMUNE_ID",
+                     "Required":"Y",
+                     "Default":"Nanterre",
+                     "Type":"string",
+                     "Description":"Les informations de la commune Nanterre."
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}
+
