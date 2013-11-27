@@ -38,7 +38,7 @@
                      "Required":"Y",
                      "Default":"Ile-de-France",
                      "Type":"string",
-                     "Description":"La liste des department de la region Ile-de-France."
+                     "Description":"La liste des departement de la region Ile-de-France."
                   }
                ]
             },
@@ -77,7 +77,7 @@
                      "Required":"Y",
                      "Default":"Ile-de-France",
                      "Type":"string",
-                     "Description":"Les informations du departement Hauts-de-Seine."
+                     "Description":"Les informations de la region Ile-de-France."
                   },
                   {
                      "Name":"DEPARTEMENT_ID",
@@ -145,6 +145,45 @@
                      "Description":"Les informations du departement Hauts-de-Seine."
                   }
                ]
+            },
+            {
+               "MethodName":"List Commune by Departement",
+               "Synopsis":"Returns the list of all Commune of one Departement.",
+               "HTTPMethod":"GET",
+               "URI":"/departement/:DEPARTEMENT_ID/commune",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"DEPARTEMENT_ID",
+                     "Required":"Y",
+                     "Default":"Hauts-de-Seine",
+                     "Type":"string",
+                     "Description":"La liste des Communes du departement Hauts-de-Seine."
+                  }
+               ]
+            },
+            {
+               "MethodName":"Commune Information",
+               "Synopsis":"Returns one Commune information for a given Departement.",
+               "HTTPMethod":"GET",
+               "URI":"/departement/:DEPARTEMENT_ID/commune/:COMMUNE_ID",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"COMMUNE_ID",
+                     "Required":"Y",
+                     "Default":"Versailles",
+                     "Type":"string",
+                     "Description":"Les informations de la commune Versailles."
+                  },
+                  {
+                     "Name":"DEPARTEMENT_ID",
+                     "Required":"Y",
+                     "Default":"Hauts-de-Seine",
+                     "Type":"string",
+                     "Description":"Les informations du departement Hauts-de-Seine."
+                  }
+               ]
             }
          ]
       },
@@ -171,6 +210,34 @@
                      "Default":"Nanterre",
                      "Type":"string",
                      "Description":"Les informations de la commune Nanterre."
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name":"Dictionnaire",
+         "methods":[
+            {
+               "MethodName":"List of all dictionnaire",
+               "Synopsis":"Returns the list of all dictionnaire",
+               "HTTPMethod":"GET",
+               "URI":"/dictionnaire",
+               "RequiresOAuth":"N"
+            },
+            {
+               "MethodName":"Dictionnaire Information",
+               "Synopsis":"Returns Dictionnaire information for a given Code.",
+               "HTTPMethod":"GET",
+               "URI":"/dictionnaire/:CODE_ID",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"CODE_ID",
+                     "Required":"Y",
+                     "Default":"DEFMREF10",
+                     "Type":"string",
+                     "Description":"Les informations du code DEFMREF10."
                   }
                ]
             }
