@@ -64,6 +64,59 @@
                      "Description":"Les informations du departement Hauts-de-Seine."
                   }
                ]
+            },
+            {
+               "MethodName":"List Commune by Departement by Region",
+               "Synopsis":"Returns the list of all Departement of one Region.",
+               "HTTPMethod":"GET",
+               "URI":"/region/:REGION_ID/departement/:DEPARTEMENT_ID/commune",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"REGION_ID",
+                     "Required":"Y",
+                     "Default":"Ile-de-France",
+                     "Type":"string",
+                     "Description":"Les informations du departement Hauts-de-Seine."
+                  },
+                  {
+                     "Name":"DEPARTEMENT_ID",
+                     "Required":"Y",
+                     "Default":"Hauts-de-Seine",
+                     "Type":"string",
+                     "Description":"Les informations du departement Hauts-de-Seine."
+                  }
+               ]
+            },
+            {
+               "MethodName":"Departement Information",
+               "Synopsis":"Returns one Commune information for a given Departement and Region.",
+               "HTTPMethod":"GET",
+               "URI":"/region/:REGION_ID/departement/:DEPARTEMENT_ID/commune/:COMMUNE_ID",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "Name":"REGION_ID",
+                     "Required":"Y",
+                     "Default":"Ile-de-France",
+                     "Type":"string",
+                     "Description":"Les informations de la region Ile-de-France."
+                  },
+                  {
+                     "Name":"DEPARTEMENT_ID",
+                     "Required":"Y",
+                     "Default":"Hauts-de-Seine",
+                     "Type":"string",
+                     "Description":"Les informations du departement Hauts-de-Seine."
+                  },
+                  {
+                     "Name":"COMMUNE_ID",
+                     "Required":"Y",
+                     "Default":"Versailles",
+                     "Type":"string",
+                     "Description":"Les informations de la commune Versailles."
+                  }
+               ]
             }
          ]
       },
